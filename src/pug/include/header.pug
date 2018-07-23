@@ -1,0 +1,63 @@
+header
+    .container
+        // mobile-header
+        .mobile-header.clearfix
+            a.mobile-header__logo(href='/')
+                img(src='/bitrix/templates/artel_new/img/logo.png', alt='Артель - старая грамота')
+                div
+                    span.logo__title артель
+                    span.logo__name старая грамота
+            .mobile-header__item
+                span.mobile-header__menu
+                a.mobile-header__cart(href='/basket/')
+        ul.main-menu.mobile-menu
+            li.has-children.touch-js
+                a Коллекции
+                ul.sub-menu
+                    li
+                        a(href='/russia/') Царская Россия
+                    li
+                        a(href='/ussr/') Советская Эпоха
+            li
+                a(href='/production/') Производство
+            li
+                a(href='/personalization/') Персонализация
+            li
+                a(href='/about/') О компании
+            li
+                a(href='/contacts/') Контакты
+        // mobile-header
+        .header
+            a.logo(href='/')
+                img(src='/bitrix/templates/artel_new/img/logo.png', alt='Артель - старая грамота')
+                div
+                    span.logo__title артель
+                    span.logo__name старая грамота
+            nav
+                .responsive-menu
+                ul.main-menu
+                    li.has-children.touch-js
+                        a Коллекции
+                        ul.sub-menu
+                            li
+                                a(href='/russia/') Царская Россия
+                            li
+                                a(href='/ussr/') Советская Эпоха
+                    li
+                        a(href='/production/') Производство
+                    li
+                        a(href='/personalization/') Персонализация
+                    li
+                        a(href='/about/') О компании
+                    li
+                        a(href='/contacts/') Контакты
+            .search
+                span.search-icon
+                form.search-form.header__search(method='get', action='/search/')
+                    input.search-form__input(type='text', name='q', placeholder='Поиск...')
+                    button.search-form__btn(type='submit')
+                span.search-arrow
+            a.cart.small_basket_block(href='/basket/')
+                span.cart__title
+                    | корзина
+                    span.cart__count (1)

@@ -1,0 +1,52 @@
+extends root/layout
+
+block container
+    include include/header
+    .section.review
+        .container
+            span.section-title.section-title--color Отзывы покупателей
+            .review-content__nav
+                a.btn.review-content__btn(href="#") Добавить отзыв
+            .section-content
+                -for (var j = 0; j < 5; j++) {
+                    .review-container
+                        .review-content__user
+                            .review-content__photo
+                                img(src="img/photo.png")
+                            .review-content__info
+                                p Ярослав Карнаков
+                                a.vk(href="#") вКонтакте
+                        .review-content__desc
+                            a(href="#") Карты-схема складная. Географическое изображение движения нефти
+                            p.review-content__text Вернулся Иван-царевич домой на коне златогривом, привез отцу своему Жар-птицу, а себе — невесту, Елену Прекрасную. Царь Берендей обрадовался, стал сына спрашивать. Стал Иван-царевич рассказывать, как помог ему серый волк достать добычу, да как братья убили его, сонного, да как серый волк их растерзал.
+                            .review-content__attachments
+                                -for (var i=0; i<3; i++) {
+                                img(src="img/attachment.png")
+                                -}
+                        .review-content__nav
+                            a.btn.review-content__btn.review-content__toggle-text(href="#") Полный текст
+                -}
+
+            .pagination.review-content__pagination
+                a.pagination__item.pagination__arrow(href='#')
+                    i.i-prev.i-arrow
+                    | Предыдущая
+                a.pagination__item.pagination__number.pagination__number--active(href='#') 1
+                a.pagination__item.pagination__number 2
+                a.pagination__item.pagination__number 3
+                a.pagination__item.pagination__arrow(href='#')
+                    | Следующая
+                    i.i-next.i-arrow
+
+
+
+    include include/footer
+    .remodal-wrapper.remodal-is-closed(style='display: none;')
+        .remodal.remodal-is-initialized.remodal-is-closed(data-remodal-id='order-switcher', tabindex='-1')
+            button.remodal-close(data-remodal-action='close')
+            span.modal-title Товар добавлен в корзину
+            span.modal-note Вы можете оформить заказ сейчас или продолжить просмотр сайта
+            .modal-btn
+                a.modal-btn__item.modal-btn__item--margin(href='/basket/') перейти в корзину
+                a.modal-btn__item(href='#', onclick="$('.remodal-close').trigger('click')") продолжить просмотр
+
