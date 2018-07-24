@@ -1,0 +1,52 @@
+extends root/layout
+
+block container
+    include include/header
+    .section.review
+        .container
+            span.section-title.section-title--color Отзывы покупателей
+            .section-content.review-content.review-content__slider
+                -for (var i=0; i < 3; i++) {
+                .review-content__item
+                    .review-content__user
+                        .review-content__photo
+                            img(src="img/photo.png")
+                        .review-content__info
+                            p Ярослав Карнаков
+                            a.vk(href="#") вКонтакте
+                    .review-content__desc
+                        a(href="#") Карты-схема складная. Географическое изображение движения нефти
+                        p.review-content__text Вернулся Иван-царевич домой на коне златогривом, привез отцу своему Жар-птицу, а себе — невесту, Елену Прекрасную. Царь Берендей обрадовался, стал сына спрашивать. Стал Иван-царевич рассказывать, как помог ему серый волк достать добычу, да как братья убили его, сонного, да как серый волк их растерзал.
+
+                .review-content__item
+                    .review-content__user
+                        .review-content__photo
+                            img(src="img/photo.png")
+                        .review-content__info
+                            p Ярослав Карнаков
+                            a.vk(href="#") вКонтакте
+                    .review-content__desc
+                        a(href="#") Дамская записная книжица
+                        p Этот красивый ежедневник – превосходный подарок для верующего православного человека. На первых страницах Вы найдете большой список имен святых. Здесь же указаны даты празднования памяти каждого из них.
+                        p Знаете ли Вы, что значит имя знаменитого Патриарха Московского и всея Руси... Его имя обозначает любитель добродетели и произошло из греческого языка.
+
+                .review-content__item
+                    .review-content__user
+                        .review-content__photo
+                            img(src="img/photo.png")
+                        .review-content__info
+                            p Ярослав Карнаков
+                            a.fb(href="#") Facebook
+                    .review-content__desc
+                        a(href="#") Альбом для фотографических снимков в стиле XIX века, малый
+                        p "Абсолютно все изделия Артели – ручная работа. Мы принципиально используем самое простое оборудование, как это делали русские мастера в позапрошлом веке. Например, вместо машины для сшивания блоков у нас обычная, деревянная рама, которой мастер сшивает вручную. Почему? Мы несем ответственность за каждый... Мы тщательно проверяем каждый шов, каждый штрих".
+                -}
+            .review-content__nav
+                a.btn.review-content__btn(href="reviews.html")
+                    | Читать все отзывы
+                    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='10px', height='5px')
+                        path(class="arrow" fill-rule='evenodd', fill='rgb(89, 83, 58)', d='M4.095,3.069 L4.095,4.999 L10.000,2.462 L4.095,0.001 L4.095,1.850 L0.001,1.850 L0.001,3.069 L4.095,3.069 Z')
+                a.btn.review-content__btn(href="#") Написать отзыв
+
+    include include/footer
+

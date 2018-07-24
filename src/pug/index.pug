@@ -2,6 +2,17 @@ extends root/layout
 
 block container
     include include/header
-    include include/reviews
-    include include/footer
+    .section
+        .container
+            ul
+                li
+                    a(href="home.html") Главная
+                li
+                    a(href="reviews.html") Отзывы
+                li
+                    a(href="reg-step-2.html") Регистрация. Шаг 2
+                li
+                    a(href="reg-step-3.html") Регистрация. Шаг 3
 
+
+    include include/footer
