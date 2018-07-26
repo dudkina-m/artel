@@ -1,0 +1,32 @@
+@import "../global";
+
+.checkbox {
+  margin-top: 36px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+
+  input[type="checkbox"] {
+    &:checked {
+      & + .checkbox__mark {
+        border-color: #554728;
+        background: #554728 url("/img/checkmark.svg") no-repeat center;
+      }
+    }
+  }
+
+  &__mark {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ac9f8a;
+    background: transparent none;
+  }
+
+  &__label {
+    padding-left: 12px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

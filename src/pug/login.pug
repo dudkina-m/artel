@@ -1,0 +1,46 @@
+extends root/layout
+
+block container
+    include include/header
+    .section.review
+        .container
+            a.btn(href="#login") Авторизация
+
+    include include/footer
+    .remodal-wrapper(style='display: none;')
+        .remodal.modal(data-remodal-id='login', tabindex='-1')
+            button.remodal-close(data-remodal-action='close')
+            .modal__header
+                span.modal-title Авторизация
+
+            .modal__content
+                .input__group
+                    .input__label-group
+                        label.input__label E-mail
+                        span.input__hint Обязательно для заполнения
+                    input.input(type="text" placeholder="Введите ваш e-mail")
+                .input__group
+                    .input__label-group
+                        label.input__label Пароль
+                        span.input__hint Обязательно для заполнения
+                    input.input(type="password" placeholder="Введите ваш пароль")
+                    a.input__link(href="#") Забыли пароль?
+
+            .modal__footer
+                a.btn.btn_dark.modal__btn(href="#") Войти на сайт
+                a.active-link(href="#") Регистрация на сайте
+            .modal__socials
+                span.socials__title Войти на сайт через соцсети:
+                ul.socials
+                    li.socials__item
+                        a.icon_fb(href="#")
+                    li.socials__item
+                        a.icon_gplus(href="#")
+                    li.socials__item
+                        a.icon_lin(href="#")
+                    li.socials__item
+                        a.icon_ok(href="#")
+                    li.socials__item
+                        a.icon_twi(href="#")
+                    li.socials__item
+                        a.icon_vk(href="#")

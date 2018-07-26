@@ -1,0 +1,16 @@
+@import '../global';
+
+.btn {
+  &_dark {
+    @include transition();
+
+    background-color: #554728;
+    border: 1px solid #554728;
+    color: #fff;
+
+    &:hover {
+      background-color: transparent;
+      color: #554728;
+    }
+  }
+}
