@@ -1,0 +1,21 @@
+.attachment {
+  display: flex;
+  margin-top: 24px;
+
+  &__img {
+    margin-right: 24px;
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__delete {
+    position: absolute;
+    right: 24px;
+    top: -5px;
+  }
+}

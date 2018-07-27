@@ -15,7 +15,11 @@ block container
                         .registration-steps__item.current
                         .registration-steps__item
                 .registration-form__content
-
+                    .change-photo
+                        .profile__photo(style="background-image: url('img/no-photo.svg')")
+                        input.filepicker(type="file" accept="image/*" id="filepicker")
+                        label.filepicker__label.btn(for="filepicker") Добавить фото
+                        a.filepicker__delete(href="#") Удалить фото
                     +input("Фамилия", "text", "Ваша Фамилия", "required")
                     +input("Имя", "text", "Ваше имя", "required")
                     +input("Отчество", "text", "Ваше отчество", "required")

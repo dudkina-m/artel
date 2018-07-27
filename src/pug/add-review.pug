@@ -20,10 +20,24 @@ block container
                     .profile__photo(style="background-image: url('/img/photo.png')")
                 .input__group
                     label.input__label Изделие
-                    input.input(type="text" placeholder="Начните вводить имя товара...")
+                    input.input#autocomplete(type="text" placeholder="Начните вводить имя товара...")
                 .input__group
                     label.input__label Текст отзыва
                     textarea.textarea(type="text" placeholder="Поделитесь Вашими впечатлениями от товара")
+                .attachment
+                    .attachment__content
+                        img.attachment__img(src="img/attachment.png")
+                        a.attachment__delete(href="#")
+                            img(src="img/delete.svg")
+                    .attachment__content
+                        img.attachment__img(src="img/attachment.png")
+                        a.attachment__delete(href="#")
+                            img(src="img/delete.svg")
+                    .attachment__content
+                        img.attachment__img(src="img/attachment.png")
+                        a.attachment__delete(href="#")
+                            img(src="img/delete.svg")
             .modal__footer.profile__modal-footer
                 a.btn.btn_dark.modal__btn(href="#" style="margin-right: 24px") Оставить отзыв
-                a.btn.modal__btn(href="#") Прикрепить фото
+                input.filepicker(type="file" accept="image/*" id="filepicker")
+                label.filepicker__label.btn.modal__filepicker(for="filepicker") Прикрепить фото

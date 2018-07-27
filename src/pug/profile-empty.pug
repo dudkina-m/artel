@@ -44,6 +44,11 @@ block container
             .modal__header
                 span.modal-title Редактировать профиль
             .modal__content
+                .change-photo
+                    .profile__photo(style="background-image: url('img/photo.png')")
+                    input.filepicker(type="file" accept="image/*" id="filepicker")
+                    label.filepicker__label.btn(for="filepicker") Новое фото
+                    a.filepicker__delete(href="#") Удалить фото
                 +input("Фамилия", "text", "Ваша фамилия", "required")
                 +input("Имя", "text", "Ваше имя", "required")
                 +input("Отчество", "text", "Ваше отчество", "required")
