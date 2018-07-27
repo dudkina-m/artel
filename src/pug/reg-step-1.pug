@@ -1,0 +1,58 @@
+extends root/layout
+
+block container
+    include include/header
+    .section.review
+        .container
+            a.btn(href="#registration") Регистрация
+
+    include include/footer
+    .remodal-wrapper(style='display: none;')
+        .remodal.modal(data-remodal-id='registration', tabindex='-1')
+            button.remodal-close(data-remodal-action='close')
+            .modal__header
+                span.modal-title Регистрация
+
+            .modal__content
+                p Укажите адрес вашей электронной почты и пароль.
+                p Мы пришлём на ваш e-mail ссылку для активации аккаунта.
+
+                .input__group
+                    .input__label-group
+                        label.input__label E-mail
+                        span.input__hint Обязательно для заполнения
+                    input.input(type="text" placeholder="Введите ваш e-mail")
+                .input__group
+                    .input__label-group
+                        label.input__label Пароль
+                        span.input__hint Обязательно для заполнения
+                    input.input(type="password" placeholder="Введите ваш пароль")
+                .input__group
+                    .input__label-group
+                        label.input__label Подтверждение пароля
+                        span.input__hint Обязательно для заполнения
+                    input.input(type="password" placeholder="Введите пароль ещё раз")
+
+                .checkbox
+                    input(id="subscribe" type="checkbox")
+                    .checkbox__mark
+                    label.checkbox__label(for="subscribe") Получать новости о товарах и событиях
+
+            .modal__footer
+                a.btn.btn_dark.modal__btn(href="#") Зарегистрироваться
+                a.active-link(href="#") Я уже зарегистрирован
+            .modal__socials
+                span.socials__title Войти на сайт через соцсети:
+                ul.socials
+                    li.socials__item
+                        a.icon_fb(href="#")
+                    li.socials__item
+                        a.icon_gplus(href="#")
+                    li.socials__item
+                        a.icon_lin(href="#")
+                    li.socials__item
+                        a.icon_ok(href="#")
+                    li.socials__item
+                        a.icon_twi(href="#")
+                    li.socials__item
+                        a.icon_vk(href="#")

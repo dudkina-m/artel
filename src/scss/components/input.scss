@@ -1,0 +1,57 @@
+@import '../global';
+
+.input {
+  @include transition();
+
+  border: 1px solid #ac9f8a;
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+  height: 48px;
+  padding: 0 15px;
+
+  &::placeholder {
+    color: rgba(0,0,0,.5);
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__label {
+    color: #716756;
+    font-size: 12px;
+    font-size: 1.2rem;
+
+    &.required {
+      &:after {
+        content: ' *';
+      }
+    }
+  }
+
+  &__hint {
+    @extend .input__label;
+
+    opacity: .5;
+
+    .error {
+      color: #c12639;
+    }
+  }
+
+  &__label-group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    position: absolute;
+    right: 18px;
+    text-decoration: underline;
+    font-size: 12px;
+    font-size: 1.2rem;
+    bottom: 16px;
+  }
+}

@@ -1,0 +1,42 @@
+extends root/layout
+
+block container
+    include include/header
+    .section.review
+        .container
+            a.btn(href="#restore") Восстановить пароль
+
+    include include/footer
+    .remodal-wrapper(style='display: none;')
+        .remodal.modal(data-remodal-id='restore', tabindex='-1')
+            button.remodal-close(data-remodal-action='close')
+            .modal__header
+                span.modal-title Регистрация
+
+            .modal__content
+                p Укажите e-mail, с которого вы регистрировались на сайте, мы отправим на него ссылку для восстановления пароля.
+
+                .input__group
+                    .input__label-group
+                        label.input__label E-mail
+                        span.input__hint Обязательно для заполнения
+                    input.input(type="text" placeholder="Введите ваш e-mail")
+
+            .modal__footer
+                a.btn.btn_dark.modal__btn(href="#") Восстановить пароль
+                a.active-link(href="#") Я вспомнил пароль
+            .modal__socials
+                span.socials__title Войти на сайт через соцсети:
+                ul.socials
+                    li.socials__item
+                        a.icon_fb(href="#")
+                    li.socials__item
+                        a.icon_gplus(href="#")
+                    li.socials__item
+                        a.icon_lin(href="#")
+                    li.socials__item
+                        a.icon_ok(href="#")
+                    li.socials__item
+                        a.icon_twi(href="#")
+                    li.socials__item
+                        a.icon_vk(href="#")

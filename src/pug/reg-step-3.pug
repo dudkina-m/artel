@@ -1,0 +1,24 @@
+extends root/layout
+include mixins/input
+
+block container
+    include include/header
+    .section.registration
+        .container
+            span.section-title.section-title--color Спасибо за регистрацию!
+            p(style="text-align: center") Расскажите немного о вас. После этого имя с адресом доставки будут выставляться автоматически
+            form.registration-form
+                .registration-form__header
+                    span Шаг 3. Контактные данные
+                    .registration-steps
+                        .registration-steps__item.complete
+                        .registration-steps__item.complete
+                        .registration-steps__item.current
+                .registration-form__content
+                    +input("Номер телефона", "text", "Ваш номер телефона", "required")
+                    +input("E-mail", "text", "Ваш E-mail", "required")
+                    +input("Адрес доставки", "text", "Почтовый индекс, город, улица, дом, квартира")
+                    button.btn Сохранить мои контактные данные
+
+    include include/footer
+

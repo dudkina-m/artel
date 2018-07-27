@@ -1,0 +1,24 @@
+extends root/layout
+include mixins/input
+
+block container
+    include include/header
+    .section.registration
+        .container
+            span.section-title.section-title--color Заполните профиль
+            p(style="text-align: center") Расскажите немного о вас. После этого имя с адресом доставки будут выставляться автоматически
+            form.registration-form
+                .registration-form__header
+                    span Шаг 2. Персональные данные
+                    .registration-steps
+                        .registration-steps__item.complete
+                        .registration-steps__item.current
+                        .registration-steps__item
+                .registration-form__content
+
+                    +input("Фамилия", "text", "Ваша Фамилия", "required")
+                    +input("Имя", "text", "Ваше имя", "required")
+                    +input("Отчество", "text", "Ваше отчество", "required")
+                    button.btn Сохранить моё имя и фото
+    include include/footer
+

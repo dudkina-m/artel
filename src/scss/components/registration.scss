@@ -1,0 +1,61 @@
+.registration {
+  background: url(../img/slider-bg.png) repeat center center;
+
+  &-form {
+    background-color: #c6bcae;
+    margin: 40px auto;
+    max-width: 560px;
+
+    &__header {
+      border-bottom: 1px solid #ac9f8a;
+      display: flex;
+      justify-content: space-between;
+      padding: 24px 48px;
+    }
+
+    &__content {
+      padding: 24px 48px 48px;
+
+      .input__group {
+        &:not(:first-child) {
+          margin-top: 24px;
+        }
+      }
+
+      .btn {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        font-size: 1.2rem;
+        height: 60px;
+        margin-top: 36px;
+        text-transform: uppercase;
+        width: 100%;
+      }
+    }
+  }
+
+  &-steps {
+    display: flex;
+
+    &__item {
+      border: 1px solid #ac9f8a;
+      border-radius: 50%;
+      height: 24px;
+      margin: 0 5px;
+      width: 24px;
+
+      &.complete {
+        background: #ac9f8a url('/img/checkmark.svg') no-repeat center;
+      }
+
+      &.current {
+        background: #554728 url('/img/question.svg') no-repeat center;
+        border-color: #554728;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
