@@ -6,7 +6,7 @@ block container
         .container
             span.section-title.section-title--color Отзывы покупателей
             .review-content__nav
-                a.btn.review-content__btn(href="#") Добавить отзыв
+                a.btn.review-content__btn(href="#modal") Добавить отзыв
             .section-content
                 -for (var j = 0; j < 5; j++) {
                     .review-container
@@ -41,10 +41,10 @@ block container
 
 
     include include/footer
-    .remodal-wrapper.remodal-is-closed(style='display: none;')
-        .remodal.remodal-is-initialized.remodal-is-closed(data-remodal-id='order-switcher', tabindex='-1')
+    .remodal-wrapper(style='display: none;')
+        .remodal(data-remodal-id='modal', tabindex='-1')
             button.remodal-close(data-remodal-action='close')
-            span.modal-title Товар добавлен в корзину
+            span.modal-title Авторизация
             span.modal-note Вы можете оформить заказ сейчас или продолжить просмотр сайта
             .modal-btn
                 a.modal-btn__item.modal-btn__item--margin(href='/basket/') перейти в корзину
