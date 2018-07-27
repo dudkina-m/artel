@@ -41,9 +41,24 @@ block container
                             p Состав заказа
                         .profile-table__cell
                             p Общая сумма заказа #[i.icon_sort]
-                .empty
-                    p История пока пуста. Сделайте первый заказ!
-                    a.btn.profile__btn.profile-table__btn(href="#") Каталог изделий
+                    - for (var i = 0; i < 5; i++) {
+                        .profile-table__row
+                            .profile-table__cell
+                                p 24515
+                                p выполнен
+                            .profile-table__cell
+                                p 12.20.2018
+                            .profile-table__cell
+                                div
+                                    span 1шт
+                                    a(href="#") Домострой сильвестровскаго извода
+                                    a(href="#") ...
+                                div
+                            .profile-table__cell
+                                p 4 700 рублей
+                    - }
+                .profile-table__footer
+                    a.btn.profile__btn(href="#") Показать ещё
     include include/footer
     .remodal-wrapper(style='display: none;')
         .remodal.modal(data-remodal-id='edit', tabindex='-1')

@@ -1,0 +1,57 @@
+.profile-table {
+  display: table;
+  margin-top: 24px;
+  width: 100%;
+
+  &__row {
+    background-color: #cac5bc;
+    display: table-row;
+
+    &:first-child {
+      background-color: #c6bcae;
+      height: 48px;
+
+      i.icon_sort {
+        margin-left: 5px;
+        color: #554728;
+      }
+
+      .profile-table__cell {
+        color: #000;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__cell {
+    display: table-cell;
+    vertical-align: middle;
+
+    &:first-child {
+      padding-left: 24px;
+    }
+
+    &:last-child {
+      padding-right: 24px;
+    }
+  }
+
+  &__btn {
+    max-width: 220px;
+  }
+
+  &__footer {
+    width: 100%;
+  }
+}
+
+.empty {
+  align-items: center;
+  background-color: #cac5bc;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  min-height: 630px;
+  width: 100%;
+}

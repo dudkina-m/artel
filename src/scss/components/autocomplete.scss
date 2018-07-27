@@ -1,24 +1,25 @@
-@import "input";
+@import 'input';
 
 .easy-autocomplete {
   width: 100% !important;
 
   input {
     @extend .input;
+
     border-radius: 0;
     width: 100%;
   }
 
   &-container {
     ul {
-      background-color: #CAC5BC;
+      background-color: #cac5bc;
       border: 1px solid #ac9f8a;
     }
     li {
-      text-align: left;
       color: #000;
       line-height: 45px;
       padding-left: 18px;
+      text-align: left;
 
       &.selected {
         background-color: #ac9f8a !important;
