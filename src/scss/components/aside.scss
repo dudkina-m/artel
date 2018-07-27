@@ -1,9 +1,49 @@
-@import "../global";
+@import '../global';
 
 .aside {
+  &__header {
+    align-items: center;
+    display: flex;
+    text-align: left;
+
+    a {
+      background: transparent url('/img/logout.svg') no-repeat right center;
+      font-size: 12px;
+      font-size: 1.2rem;
+      margin-left: 20px;
+      padding-right: 20px;
+      text-align: center;
+      text-decoration: underline;
+    }
+  }
 
   &__container {
-    width: 40%;
-    margin-right: 30px;
+    background-color: #c6bcae;
+    margin-top: 24px;
+    padding: 34px;
+    width: 100%;
+
+    .input__group:not(:first-child) {
+      margin-top: 16px;
+    }
+  }
+
+  &__content {
+    padding: 24px 0;
+    position: relative;
+
+    &:before,
+    &:after {
+      background-color: #ac9f8a;
+      content: '';
+      height: 1px;
+      left: -34px;
+      position: absolute;
+      width: calc(100% + 68px);
+    }
+
+    &:after {
+      top: 100%;
+    }
   }
 }

@@ -11,8 +11,7 @@ block container
                 -for (var j = 0; j < 5; j++) {
                     .review-container
                         .review-content__user
-                            .review-content__photo
-                                img(src="img/photo.png")
+                            .review-content__photo(style="background-image: url('img/photo.png')")
                             .review-content__info
                                 p Ярослав Карнаков
                                 a.vk(href="#") вКонтакте
@@ -49,4 +48,3 @@ block container
             .modal-btn
                 a.modal-btn__item.modal-btn__item--margin(href='/basket/') перейти в корзину
                 a.modal-btn__item(href='#', onclick="$('.remodal-close').trigger('click')") продолжить просмотр
-

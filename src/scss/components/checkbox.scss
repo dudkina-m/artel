@@ -1,25 +1,25 @@
-@import "../global";
+@import '../global';
 
 .checkbox {
+  align-items: center;
+  display: flex;
   margin-top: 36px;
   text-align: left;
-  display: flex;
-  align-items: center;
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     &:checked {
       & + .checkbox__mark {
+        background: #554728 url('/img/checkmark.svg') no-repeat center;
         border-color: #554728;
-        background: #554728 url("/img/checkmark.svg") no-repeat center;
       }
     }
   }
 
   &__mark {
-    width: 24px;
-    height: 24px;
-    border: 1px solid #ac9f8a;
     background: transparent none;
+    border: 1px solid #ac9f8a;
+    height: 24px;
+    width: 24px;
   }
 
   &__label {

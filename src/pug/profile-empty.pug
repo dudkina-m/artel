@@ -1,13 +1,77 @@
 extends root/layout
+include mixins/input
 
 block container
     include include/header
     .section.profile
         .container.profile__container
-            .profile__content.aside__container
-
             .profile__content
-
+                .aside__header
+                    span.section-title.section-title--color Мой профиль
+                    a.logout(href="#") Выйти из профиля
+                .aside__container
+                    .profile__user
+                        .profile__photo.verified(style="background-image: url('img/photo.png'")
+                        .profile__name Голополосов Максим Александрович
+                    .input__group
+                        label.input__label Телефон:
+                        input.input.disabled(type="text" value="+ 7 (185) 451 84 65")
+                    .input__group
+                        label.input__label Email:
+                        input.input.disabled(type="text" value="Maxxx.Polos@gmail.com")
+                    .input__group
+                        label.input__label Адрес доставки:
+                        textarea.input.disabled 142793, г. Москва, ул. Новая вавиловская. д. 158, кв. 154)
+                    a.btn.btn_dark.profile__btn(href="#edit") Редактировать данные
+                    .aside__content
+                        a.btn.profile__btn(href="#change-pass") Сменить пароль
+                    .checkbox.profile__checkbox
+                        input(id="subscribe" type="checkbox")
+                        .checkbox__mark
+                        label.checkbox__label(for="subscribe") Получать новости о товарах и событиях
+            .profile__content
+                span.section-title.section-title--color История моих заказов
+                table.profile__table
+                    tr
+                        td Номер
+                        td Дата
+                        td Состав заказа
+                        td Общая сумма заказа
     include include/footer
+    .remodal-wrapper(style='display: none;')
+        .remodal.modal(data-remodal-id='edit', tabindex='-1')
+            button.remodal-close(data-remodal-action='close')
+            .modal__header
+                span.modal-title Редактировать профиль
+            .modal__content
+                +input("Фамилия", "text", "Ваша фамилия", "required")
+                +input("Имя", "text", "Ваше имя", "required")
+                +input("Отчество", "text", "Ваше отчество", "required")
+                +input("Номер телефона", "text", "Ваш номер телефона", "required")
+                +input("E-mail", "text", "Ваш E-mail", "required")
+                +input("Адрес доставки", "text", "Почтовый индекс, город, улица, дом, квартира", "")
+            .modal__footer.profile__modal-footer
+                a.btn.btn_dark.modal__btn(href="#") Сохранить изменения
 
-
+        .remodal.modal(data-remodal-id='change-pass', tabindex='-1')
+            button.remodal-close(data-remodal-action='close')
+            .modal__header
+                span.modal-title Сменить пароль
+            .modal__content
+                .input__group
+                    .input__label-group
+                        label.input__label Введите старый пароль
+                        span.input__hint Обязательно для заполнения
+                    input.input(type="password")
+                .input__group
+                    .input__label-group
+                        label.input__label Введите новый пароль
+                        span.input__hint Обязательно для заполнения
+                    input.input(type="password")
+                .input__group
+                    .input__label-group
+                        label.input__label Введите новый пароль ещё раз
+                        span.input__hint Обязательно для заполнения
+                    input.input(type="password")
+            .modal__footer.profile__modal-footer
+                a.btn.btn_dark.modal__btn(href="#") Изменить пароль

@@ -13,6 +13,18 @@
     color: rgba(0,0,0,.5);
   }
 
+  &:not(input) {
+    height: max-content;
+    padding: 6px 12px;
+    resize: none;
+  }
+
+  &.disabled {
+    background-color: #bcaf9d;
+    border-color: #bcaf9d;
+    pointer-events: none;
+  }
+
   &__group {
     display: flex;
     flex-direction: column;
@@ -47,11 +59,19 @@
   }
 
   &__link {
+    bottom: 16px;
+    font-size: 12px;
+    font-size: 1.2rem;
     position: absolute;
     right: 18px;
     text-decoration: underline;
-    font-size: 12px;
-    font-size: 1.2rem;
-    bottom: 16px;
   }
+}
+
+.textarea {
+  @extend .input;
+
+  height: 140px !important;
+  padding: 6px 12px;
+  resize: none;
 }

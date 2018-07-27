@@ -1,0 +1,29 @@
+extends root/layout
+
+block container
+    include include/header
+    .section.review
+        .container
+            a.btn(href="#add-review") Добавить отзыв
+
+    include include/footer
+    .remodal-wrapper(style='display: none;')
+        .remodal.modal(data-remodal-id='add-review', tabindex='-1')
+            button.remodal-close(data-remodal-action='close')
+            .modal__header
+                span.modal-title Добавить отзыв
+            .modal__content
+                .profile__authorized
+                    .input__group
+                        label.input__label Ваше ФИО
+                        input.input(type="text" placeholder="Введите ваше имя" value="Голополосов Максим Александрович")
+                    .profile__photo(style="background-image: url('/img/photo.png')")
+                .input__group
+                    label.input__label Изделие
+                    input.input(type="text" placeholder="Начните вводить имя товара...")
+                .input__group
+                    label.input__label Текст отзыва
+                    textarea.textarea(type="text" placeholder="Поделитесь Вашими впечатлениями от товара")
+            .modal__footer.profile__modal-footer
+                a.btn.btn_dark.modal__btn(href="#" style="margin-right: 24px") Оставить отзыв
+                a.btn.modal__btn(href="#") Прикрепить фото

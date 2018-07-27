@@ -200,6 +200,7 @@ $(document).ready(function() {
 $(function() {
     reviewSliderInit();
     toggleReviewText();
+    autocomplete();
 });
 
 function reviewSliderInit() {
@@ -243,4 +244,17 @@ function toggleReviewText() {
 
         })
     })
+}
+
+function autocomplete() {
+  var options = {
+    data: ["blue", "green", "pink", "red", "yellow", "blue", "green", "pink", "red", "yellow"],
+    list: {
+      match: {
+        enabled: true
+      }
+    }
+  };
+
+  $("#autocomplete").easyAutocomplete(options);
 }
