@@ -44,18 +44,23 @@ block container
                     - for (var i = 0; i < 5; i++) {
                         .profile-table__row
                             .profile-table__cell
-                                p 24515
-                                p выполнен
+                                p.bold 24515
+                                p.profile-table__status Выполнен
                             .profile-table__cell
                                 p 12.20.2018
                             .profile-table__cell
-                                div
-                                    span 1шт
-                                    a(href="#") Домострой сильвестровскаго извода
-                                    a(href="#") ...
-                                div
+                                div.profile-table__product
+                                    span.profile-table__quantity 1шт.
+                                    a.active-link(href="#") Домострой сильвестровскаго извода
+                                    a.profile-table__info(href="#info")
+                                        img(src="img/dots.svg")
+                                div.profile-table__product
+                                    span.profile-table__quantity 1шт.
+                                    a.active-link(href="#") Домострой сильвестровскаго извода
+                                    a.profile-table__info(href="#info")
+                                        img(src="img/dots.svg")
                             .profile-table__cell
-                                p 4 700 рублей
+                                p.bold 4 700 рублей
                     - }
                 .profile-table__footer
                     a.btn.profile__btn(href="#") Показать ещё
@@ -102,3 +107,63 @@ block container
                     input.input(type="password")
             .modal__footer.profile__modal-footer
                 a.btn.btn_dark.modal__btn(href="#") Изменить пароль
+
+        .remodal.modal.product__info(data-remodal-id='info', tabindex='-1')
+            button.remodal-close(data-remodal-action='close')
+            .profile-table
+                .profile-table__row
+                    .profile-table__cell
+                        p.bold Изделие:
+                    .profile-table__cell
+                        p Главная книга для ведения записей личного характе…
+                    .profile-table__cell
+                        p 2 500 рублей
+                .profile-table__row
+                    .profile-table__cell
+                        p.bold Цвет обложки:
+                    .profile-table__cell
+                        p Горький шоколад
+                    .profile-table__cell
+                        p 500 рублей
+                .profile-table__row
+                    .profile-table__cell
+                        p.bold Цвет обреза:
+                    .profile-table__cell
+                        p Мраморный
+                    .profile-table__cell
+                        p 500 рублей
+                .profile-table__row
+                    .profile-table__cell
+                        p.bold Тиснение:
+                    .profile-table__cell
+                        p Персональное
+                    .profile-table__cell
+                        p 500 рублей
+                .profile-table__row
+                    .profile-table__cell
+                        p.bold Титул:
+                    .profile-table__cell
+                        p Без рекламного блока
+                    .profile-table__cell
+                        p 500 рублей
+                .profile-table__row
+                    .profile-table__cell
+                        p.bold Рекламный модуль:
+                    .profile-table__cell
+                        p Стандартный
+                    .profile-table__cell
+                        p 0 рублей
+                .profile-table__row
+                    .profile-table__cell
+                        p.bold Упаковка:
+                    .profile-table__cell
+                        p Бесплатная коробка из синего крафта
+                    .profile-table__cell
+                        p 0 рублей
+                .profile-table__row
+                    .profile-table__cell
+                        p.bold Итого стоимость:
+                    .profile-table__cell
+                        p -
+                    .profile-table__cell
+                        p 4 500 рублей

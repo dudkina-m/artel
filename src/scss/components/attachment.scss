@@ -2,12 +2,20 @@
   display: flex;
   margin-top: 24px;
 
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+
   &__img {
     height: 60px;
     margin-right: 24px;
     width: 80px;
 
     object-fit: cover;
+
+    @media screen and (max-width: 767px) {
+      margin: 12px 12px 0 0;
+    }
   }
 
   &__content {
@@ -18,5 +26,10 @@
     position: absolute;
     right: 24px;
     top: -5px;
+
+    @media screen and (max-width: 767px) {
+      right: 12px;
+      top: 10px;
+    }
   }
 }

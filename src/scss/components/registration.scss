@@ -11,10 +11,18 @@
       display: flex;
       justify-content: space-between;
       padding: 24px 48px;
+
+      @media screen and (max-width: 767px) {
+        padding: 24px 12px;
+      }
     }
 
     &__content {
       padding: 24px 48px 48px;
+
+      @media screen and (max-width: 767px) {
+        padding: 24px 12px;
+      }
 
       .input__group {
         &:not(:first-child) {
@@ -30,6 +38,10 @@
         margin-top: 36px;
         text-transform: uppercase;
         width: 100%;
+
+        @media screen and (max-width: 767px) {
+          height: 48px;
+        }
       }
     }
   }

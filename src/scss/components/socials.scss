@@ -5,6 +5,11 @@
   justify-content: center;
   margin-top: 24px;
 
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+
   &__item {
     @include transition();
 
@@ -12,6 +17,10 @@
     height: 48px;
     margin: 0 6px;
     width: 48px;
+
+    @media screen and (max-width: 767px) {
+      margin-top: 12px;
+    }
 
     a {
       align-items: center;

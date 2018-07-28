@@ -4,9 +4,60 @@
   max-width: 600px;
   padding: 0;
 
+  &.product__info {
+    background: #cac5bc none;
+    max-width: 750px;
+    padding: 36px;
+
+    @media screen and (max-width: 767px) {
+      padding: 24px;
+    }
+
+    .profile-table__cell {
+      line-height: 36px;
+      padding: 0 24px;
+      text-align: left;
+      vertical-align: middle;
+      &:last-child {
+        text-align: right;
+      }
+
+      &:first-child {
+        @media screen and (max-width: 767px) {
+          min-width: 150px;
+        }
+      }
+
+      &:nth-child(3) {
+        @media screen and (max-width: 767px) {
+          width: max-content;
+        }
+      }
+    }
+
+    .profile-table__row {
+      &:first-child {
+        background: transparent;
+        height: auto;
+      }
+
+      &:nth-child(odd) {
+        background-color: transparent;
+      }
+
+      &:nth-child(even) {
+        background-color: #c6bcae;
+      }
+    }
+  }
+
   &__header {
     border-bottom: 1px solid #ac9f8a;
     padding: 20px 48px;
+
+    @media screen and (max-width: 767px) {
+      padding: 10px 24px;
+    }
 
     .modal-title {
       font-size: 30px;
@@ -15,6 +66,10 @@
 
   &__content {
     padding: 24px 48px 36px;
+
+    @media screen and (max-width: 767px) {
+      padding: 24px;
+    }
 
     p {
       color: #000;
@@ -40,6 +95,11 @@
     display: flex;
     padding: 0 48px;
 
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      padding: 24px 24px 0;
+    }
+
     .btn {
       align-items: center;
       display: flex;
@@ -49,6 +109,16 @@
       justify-content: center;
       text-transform: uppercase;
       width: 100%;
+
+      &:first-child {
+        @media screen and (max-width: 767px) {
+          margin: 0 !important;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        height: 48px;
+      }
     }
 
     .active-link {
@@ -60,6 +130,10 @@
       &:hover {
         opacity: .7;
       }
+
+      @media screen and (max-width: 767px) {
+        margin-top: 24px;
+      }
     }
   }
 
@@ -67,6 +141,10 @@
     border-top: 1px solid #ac9f8a;
     margin-top: 36px;
     padding: 24px 0 48px;
+
+    @media screen and (max-width: 767px) {
+      padding: 24px 0;
+    }
   }
 
   &__step {
@@ -80,6 +158,10 @@
       justify-content: center;
       text-transform: uppercase;
       width: 100%;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 36px 24px;
     }
   }
 
@@ -102,5 +184,10 @@
   &__filepicker {
     height: 60px !important;
     width: 100% !important;
+
+    @media screen and (max-width: 767px) {
+      height: 48px !important;
+      margin-top: 12px !important;
+    }
   }
 }

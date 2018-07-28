@@ -211,10 +211,10 @@ function reviewSliderInit() {
         dots: true,
         responsive: [
             {
-                breakpoint: 1280,
+                breakpoint: 1000,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                     infinite: true,
                     dots: true
                 }

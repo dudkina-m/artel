@@ -12,11 +12,21 @@
     margin-top: 0 !important;
     text-transform: uppercase;
     width: 164px !important;
+
+    @media screen and (max-width: 400px) {
+      margin-right: 0;
+      width: 120px !important;
+    }
   }
 
   &__delete {
     color: #554728;
     font-size: 1.2rem;
     text-decoration: underline;
+
+    @media screen and (max-width: 400px) {
+      text-align: right;
+      width: 100%;
+    }
   }
 }

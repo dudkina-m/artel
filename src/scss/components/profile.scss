@@ -1,11 +1,15 @@
 @import '../global';
 
 .profile {
-  background: url(../img/slider-bg.png) repeat center center;
+  background-color: #cfcac1;
 
   &__container {
     display: flex;
     height: max-content;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
   }
 
   &__content {
@@ -15,11 +19,20 @@
     &:first-child {
       margin-right: 30px;
       max-width: 33%;
+
+      @media screen and (max-width: 767px) {
+        margin: 0;
+        max-width: 100%;
+      }
     }
 
     &:last-child {
       .section-title {
         text-align: left;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin-top: 24px;
       }
     }
   }
@@ -95,10 +108,64 @@
 
     .input__group {
       width: 100%;
+
+      @media screen and (max-width: 360px) {
+        max-width: 160px;
+      }
     }
 
     .profile__photo {
       margin-left: 24px;
+    }
+  }
+
+  &__block {
+    @include transition();
+
+    align-items: center;
+    background-color: #292929;
+    border-radius: 50%;
+    color: #b5aa99;
+    display: flex;
+    height: 46px;
+    justify-content: center;
+    margin: 0 30px;
+    position: relative;
+    width: 46px;
+
+    @media screen and (max-width: 767px) {
+      background-color: transparent;
+      display: inline-block;
+      font-size: 21px;
+      height: 25px;
+      margin: 0 0 0 15px;
+      padding: 4px;
+      text-align: center;
+      vertical-align: middle;
+      width: 25px;
+    }
+
+    &:hover,
+    &.active {
+      background-color: #b4a774;
+      color: #000;
+    }
+
+    &.active {
+      &:after {
+        border-bottom: 8px solid #cac5bc;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        content: '';
+        height: 0;
+        position: absolute;
+        top: calc(100% + 17px);
+        width: 0;
+
+        @media screen and (max-width: 1280px) {
+          display: none;
+        }
+      }
     }
   }
 }

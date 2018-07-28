@@ -51,6 +51,10 @@
     .error {
       color: #c12639;
     }
+
+    @media screen and (max-width: 767px) {
+      text-align: right;
+    }
   }
 
   &__label-group {
@@ -65,6 +69,12 @@
     position: absolute;
     right: 18px;
     text-decoration: underline;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      right: 0;
+      top: calc(100% + 12px);
+    }
   }
 }
 

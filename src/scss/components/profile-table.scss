@@ -5,15 +5,44 @@
 
   &__row {
     background-color: #cac5bc;
+    border-bottom: 1px solid #ac9f8a;
     display: table-row;
+
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 12px;
+    }
+
+    &:nth-child(even) {
+      background-color: transparent;
+
+      @media screen and (max-width: 767px) {
+        background-color: #cac5bc;
+      }
+    }
+
+    &:nth-child(odd) {
+      background-color: #cac5bc;
+
+      @media screen and (max-width: 767px) {
+        background-color: transparent;
+      }
+    }
 
     &:first-child {
       background-color: #c6bcae;
+      border: 0;
       height: 48px;
+      vertical-align: middle;
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
 
       i.icon_sort {
-        margin-left: 5px;
         color: #554728;
+        margin-left: 5px;
       }
 
       .profile-table__cell {
@@ -25,14 +54,34 @@
 
   &__cell {
     display: table-cell;
-    vertical-align: middle;
+    font-size: 12px;
+    padding: 24px 0;
+
+    @media screen and (max-width: 767px) {
+      padding: 12px 0;
+    }
+
+    .bold {
+      font-weight: 700;
+    }
 
     &:first-child {
       padding-left: 24px;
+
+      @media screen and (max-width: 767px) {
+        padding-left: 0;
+      }
     }
 
     &:last-child {
       padding-right: 24px;
+      text-align: right;
+    }
+
+    &:nth-child(3) {
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
     }
   }
 
@@ -42,6 +91,54 @@
 
   &__footer {
     width: 100%;
+  }
+
+  &__status {
+    font-size: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+    opacity: .5;
+  }
+
+  &__quantity {
+    border: 1px solid #ac9f8a;
+    display: inline-block;
+    margin-right: 10px;
+    min-width: 50px;
+    padding: 2px 0;
+    text-align: center;
+  }
+
+  &__info {
+    align-items: center;
+    border: 1px solid #ac9f8a;
+    border-radius: 50%;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    min-width: 24px;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__product {
+    align-items: center;
+    display: flex;
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+
+    @media screen and (max-width: 767px) {
+      justify-content: space-between;
+    }
+
+    .active-link {
+      max-width: 290px;
+      text-decoration: underline;
+      width: 100%;
+    }
   }
 }
 
@@ -54,4 +151,10 @@
   justify-content: center;
   min-height: 630px;
   width: 100%;
+
+  @media screen and (max-width: 767px) {
+    min-height: max-content;
+    padding: 24px 12px;
+    text-align: center;
+  }
 }
